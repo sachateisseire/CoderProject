@@ -9,4 +9,20 @@ def curso(request, nombre, camada):
     mi_curso = Curso(nombre=nombre, camada=camada)
     mi_curso.save()
 
-    return HttpResponse(f'Se generó el curso de {mi_curso.nombre} en la camada {mi_curso.camada}')
+    return render(request, 'AppCoder/cursos.html', {'nombre':nombre, 'camada':camada})
+
+def profesores(request):
+
+    return render(request, 'AppCoder/profesores.html')
+
+def estudiantes(request):
+
+    return render(request, 'AppCoder/estudiantes.html')
+
+def entregables(request):
+
+    return render(request, 'AppCoder/entregables.html')
+
+def inicio(request):
+
+    return HttpResponse('vista de inicio')
