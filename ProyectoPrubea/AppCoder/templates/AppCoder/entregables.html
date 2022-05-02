@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entregables</title>
-</head>
-<body style="background-color: black;">
-    
-<h3 style="color: white; font-size: xx-large;">Esta es la template de <b style="color: yellow;">Entregables</b></h3>
+{% extends 'AppCoder/padre.html' %}
 
-</body>
-</html>
+{% load static %}
+
+
+{% block bloqueQueCambia %}
+    
+<h1>Página de entregables</h1>
+
+<p>Este es un párrafo que cuenta algunas cosas.</p>
+
+{% endblock bloqueQueCambia %}

@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesores</title>
-</head>
-<body style="background-color: black;">
-    
-<h3 style="color: white; font-size: xx-large;">Esta es la template de <b style="color: forestgreen;">Profesores</b></h3>
+{% extends 'AppCoder/padre.html' %}
 
-</body>
-</html>
+{% load static %}
+
+
+{% block bloqueQueCambia %}
+    
+<h1>Página de inicio</h1>
+
+<ul>
+    <li>Mauricio Cuello</li>
+    <li>Francisco Sforza</li>
+    <li>Octavio Augusto</li>
+    <li>Alfredo Gomez</li>
+    <li>Wanchope Abila</li>
+</ul>
+
+{% endblock bloqueQueCambia %}

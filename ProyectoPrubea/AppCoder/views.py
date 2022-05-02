@@ -25,4 +25,5 @@ def entregables(request):
 
 def inicio(request):
 
-    return HttpResponse('vista de inicio')
+    return render(request, 'AppCoder/inicio.html')
+
