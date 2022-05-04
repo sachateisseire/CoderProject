@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Formulario</title>
+</head>
+<body style="background-color: black; color: white; font-size: x-large;">
+
+    
+    {% if miForm.errors %}
+        
+        <p style="color: red;">Están mal los datos, revisar!</p>
+
+    {% endif %}
+        
+
+    <form style="background-color: dimgray; margin: 10px; padding: 10px;" action="/AppCoder/cursoFormulario/" method="POST"> {% csrf_token %}
+
+    <!-- <p>Curso: <input type="text" name="curso" placeholder="Ingrese nombre"></p>
+
+    <p>Camada: <input type="text" name="camada" placeholder="Ingrese camada"></p> -->
+
+    {{miForm.as_p}}
+
+    <input type="submit" value="Crear">
+
+    </form>
+
+</body>
+</html>

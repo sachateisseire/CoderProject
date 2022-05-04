@@ -5,14 +5,26 @@
 
 {% block bloqueQueCambia %}
     
-<h1>Página de inicio</h1>
+<h1>Formulario - Agregar Profesor</h1>
 
-<ul>
-    <li>Mauricio Cuello</li>
-    <li>Francisco Sforza</li>
-    <li>Octavio Augusto</li>
-    <li>Alfredo Gomez</li>
-    <li>Wanchope Abila</li>
-</ul>
+
+{% if miFormulario.errors %}
+    
+<p style="color: red;">Están mal los datos, revisar</p>
+
+{% endif %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+
+            {{ miFormulario.as_table}}
+
+    </table>
+
+
+    <input type="submit", value="Enviar">
+
+</form>
 
 {% endblock bloqueQueCambia %}
